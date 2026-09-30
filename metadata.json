@@ -1,0 +1,8 @@
+{
+  "name": "Connectra  Social— Full-Stack Creative Network",
+  "description": "A modern, responsive full-stack social media platform with stories, nested comments, real-time search, messaging, bookmarks, and Django REST architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

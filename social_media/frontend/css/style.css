@@ -1,0 +1,75 @@
+/* Aether Social — Design System & Responsive Stylesheet (frontend/css/style.css) */
+:root {
+  --bg-canvas: #F8F7F4;
+  --bg-surface: #FFFFFF;
+  --text-primary: #141413;
+  --text-muted: #6E6D68;
+  --border-hairline: rgba(20, 20, 19, 0.09);
+  --accent-primary: #C84B31;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+[data-theme="dark"] {
+  --bg-canvas: #0D0E11;
+  --bg-surface: #15171C;
+  --text-primary: #F3F4F6;
+  --text-muted: #9CA3AF;
+  --border-hairline: rgba(255, 255, 255, 0.09);
+  --accent-primary: #E05A40;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  transition: background-color 180ms cubic-bezier(0.16, 1, 0.3, 1), color 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.layout-grid {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 660px) 320px;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .layout-grid {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+  }
+}
+
+.post-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.post-card:hover {
+  transform: scale(1.008);
+  box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connectra Social — Home Feed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <a href="/" class="brand-wordmark">Connectra</a>
+    <nav class="primary-links">
+      <a href="/">Home</a>
+      <a href="/explore/">Explore</a>
+      <a href="/notifications/">Notifications</a>
+      <a href="/messages/">Messages</a>
+      <a href="/profile/">Profile</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" type="button">Theme</button>
+    </div>
+  </header>
+  <main class="layout-grid" id="app-root">
+    <!-- Hydrated dynamically by /static/js/app.js via Django REST Framework -->
+  </main>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
